@@ -57,7 +57,6 @@ class MyAppState extends State<MyApp>{
                   onPressed: dioTest,
                   child: Text('GET Server Data')
               ),
-
             ],
           ),
         ),
