@@ -47,7 +47,7 @@ class IconWidget extends StatelessWidget{
   final bool favorited;
   final Function onChanged;
 
-  IconWidget({this.favorited: false, required this.onChanged});
+  IconWidget({this.favorited = false, required this.onChanged});
 
   void _handleTap(){
     onChanged();
