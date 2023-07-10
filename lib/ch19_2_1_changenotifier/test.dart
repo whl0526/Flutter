@@ -1,5 +1,4 @@
 //49.변경된 상태를 하위 위젯어 적용하기
-import 'package:flutter_lab/ch_19_1_provider/test.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
