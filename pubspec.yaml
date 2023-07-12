@@ -45,6 +45,7 @@ dependencies:
   bloc: ^8.0.3
   flutter_bloc: ^8.0.1
   get: ^4.6.5
+  geolocator: ^8.2.1
 
 
 dev_dependencies:
