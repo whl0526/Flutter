@@ -46,6 +46,7 @@ dependencies:
   flutter_bloc: ^8.0.1
   get: ^4.6.5
   geolocator: ^8.2.1
+  image_picker: ^0.8.5+3
 
 
 dev_dependencies:
