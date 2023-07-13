@@ -47,7 +47,9 @@ dependencies:
   get: ^4.6.5
   geolocator: ^8.2.1
   image_picker: ^0.8.5+3
-
+  firebase_core: ^2.14.0
+  firebase_auth: ^4.6.3
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
