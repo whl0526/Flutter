@@ -54,8 +54,8 @@ class MyApp extends StatelessWidget{
       initialRoute: '/',
       routes: {
         '/': (context) => ListScreen(),  // '/' 경로에 대한 핸들러 추가
-        'list': (contetxt) => ListScreen(),
-        'input' : (context) => InputScreen(),
+        '/list': (contetxt) => ListScreen(),
+        '/input': (context) => InputScreen(),
 
       },
     );
