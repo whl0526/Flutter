@@ -64,15 +64,15 @@ class AuthWidgetState extends State<AuthWidget>{
                 isInput = false;
               });
             }else{
-              showToast('emailVerified error');
+              showToast('이메일 검증 미완료.');
             }
             return value;
       });
     }on FirebaseAuthException catch(e){
       if(e.code == 'user-not-found'){
-        showToast('user-not-found');
+        showToast('아이디가 없습니다.');
       }else if(e.code == 'wrong-password'){
-        showToast('wrong-password');
+        showToast('비밀번호를 다시 입력해주세요.');
       }else{
         print(e.code);
       }
@@ -115,7 +115,7 @@ class AuthWidgetState extends State<AuthWidget>{
   List<Widget> getInputWidget(){
     return [
       Text(
-        isSignIn ? "Signin": "SignUp",
+        isSignIn ? "로그인": "회원가입",
         style: TextStyle(
           color: Colors.green,
           fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class AuthWidgetState extends State<AuthWidget>{
               decoration: InputDecoration(labelText: 'email'),
               validator: (value){
                 if(value?.isEmpty ?? false){
-                  return 'please enter email';
+                  return '이메일을 입력해주세요.';
                 }
                 return null;
               },
@@ -145,7 +145,7 @@ class AuthWidgetState extends State<AuthWidget>{
               obscureText: true,//****password
               validator: (value){
                 if(value?.isEmpty ?? false){
-                  return 'please enter password';
+                  return '비밀번호를 입력해주세요.';
                 }
                 return null;
               },
@@ -164,7 +164,7 @@ class AuthWidgetState extends State<AuthWidget>{
                     }
                   }
                 },
-                child: Text(isSignIn ? "SignIn": "SignUp")
+                child: Text(isSignIn ? "로그인2": "회원가입2")
             ),
             RichText(
               textAlign: TextAlign.right,
@@ -173,7 +173,7 @@ class AuthWidgetState extends State<AuthWidget>{
                   style: Theme.of(context).textTheme.bodyText1,
                   children:[
                     TextSpan(
-                      text: isSignIn ? "SignUp" : "SignIn",
+                      text: isSignIn ? "회원가입3" : "로그인3",
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
